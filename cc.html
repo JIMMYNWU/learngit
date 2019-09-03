@@ -1,0 +1,983 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>TNT Consignment Note</title><script type="text/javascript">
+                   
+         var firstPagePrinted = false;
+         
+         function includePageBreak() {
+           if (firstPagePrinted) {
+             document.writeln('&lt;div class="pagebreak"&gt;');
+             document.writeln('&lt;font size="1" color="#FFFFFF"&gt;.&lt;/font&gt;');
+               document.writeln('&lt;/div&gt;');
+           } else {
+             firstPagePrinted = true;
+           }
+         }
+         
+        </script><style>
+          
+          div.pagebreak {
+              page-break-before: always;
+          }
+
+          .body {
+              width: 950px;
+              border: 1px solid black;
+              padding: 2px;
+              padding-top: 4px;
+              min-height: 702px;
+          }
+
+          .column1 {
+              width: 370px;
+              float: left;
+              padding-left: 2px;
+              padding-right: 2px;
+          }
+
+          .column2 {
+              width: 370px;
+              float: right;
+              padding-left: 2px;
+              padding-right: 2px;
+          }
+
+          .row {
+              width: 100%;
+              float: left;
+          }
+
+          .rowright {
+              width: 99%;
+              float: right;
+          }
+
+          .rowheight {
+              height: 121px;
+          }
+
+          .addressheight {
+              height: 107px;
+          }
+
+          .goodsheight {
+              height: 102px;
+          }
+
+          .serviceheight {
+              height: 189px;
+          }
+
+          .dutyheight {
+              height: 79px;
+          }
+
+          .instructionsheight {
+              height: 64px;
+          }
+
+          .custrefheight {
+              height: 38px;
+          }
+
+          .header {
+              padding-left: 2px;
+              padding-bottom: 2px;
+              background-color: #000000;
+              height: 15px;
+              border: 2px solid #000000;
+              width: 99%;
+          }
+
+          .separatorheight {
+              line-height: 25%;
+          }
+
+          .Line30fixed {
+              height: 9px;
+              line-height: 30%;
+              padding-left: 2px;
+          }
+
+          .Line80fixed12 {
+              height: 12px;
+              line-height: 80%;
+              padding-left: 2px;
+          }
+
+          .Line80fixed17 {
+              height: 17px;
+              line-height: 80%;
+              padding-left: 2px;
+          }
+          
+          .Line80fixed21 {
+              height: 21px;
+              line-height: 80%;
+              padding-left: 2px;
+              padding-top: 4px;
+          }
+
+          .Line21fixed {
+              height: 21px;
+              margin: 2px;
+          }
+
+          .signatureBox {
+              line-height: 2%;
+          }
+
+          .barcode {
+              line-height: 85%;
+          }
+
+          .addressHeader {
+              width: 14%;
+              float: left;
+          }
+
+          .addressData {
+              width: 85%;
+              float: left;
+              overflow: hidden;
+          }
+
+          .addressAccHeader {
+              width: 32%;
+              float: left;
+          }
+
+          .addressAccData {
+              width: 66%;
+              float: left;
+          }
+
+          .addressLMFColumnLeft {
+              width: 57%;
+              float: left;
+          }
+
+          .addressLMFColumnRight {
+              width: 42%;
+              float: right;
+          }
+
+          .addressLMFHeaderLLeft1 {
+              width: 24.6%;
+              float: left;
+          }
+
+          .addressLMFDataLLeft1 {
+              width: 74%;
+              float: left;
+          }
+
+          .addressLMFDataLLeft2 {
+              width: 63.6%;
+              float: left;
+              overflow: hidden;
+          }
+
+          .addressLMFHeaderLLeft2 {
+              width: 35%;
+              float: left;
+          }
+
+          .addressLMFHeaderRRight1 {
+              width: 54%;
+              float: left;
+          }
+
+          .addressLMFDataRRight1 {
+              width: 42%;
+              margin-right: 2px;
+              float: left;
+              text-align: right;
+              padding-right: 2px;
+          }
+
+          .addressLMFHeaderRRight2 {
+              width: 31%;
+              float: left;
+          }
+
+          .addressLMFDataRRight2 {
+              width: 65%;
+              margin-right: 2px;
+              float: left;
+              overflow: hidden;
+              padding-right: 2px;
+          }
+
+          .HtsColumnLeft {
+              width: 36%;
+              float: left;
+          }
+
+          .HtsColumnRight {
+              width: 63%;
+              float: right;
+          }
+
+          .PackColumn {
+              width: 27%;
+              float: left;
+          }
+
+          .WeightColumn {
+              width: 35%;
+              float: left;
+          }
+
+          .VolumeColumn {
+              width: 37%;
+              float: left;
+          }
+
+          .ServColumnHeader {
+              width: 12%;
+              float: left;
+          }
+
+          .ServColumnData {
+              width: 48%;
+              float: left;
+          }
+
+          .ServGenColumnRight {
+              width: 39%;
+              float: left;
+          }
+
+          .centered {
+              text-align: center;
+          }
+
+          .CurColumnHeader {
+              width: 28%;
+              float: left;
+          }
+
+          .padded2 {
+              padding-top: 2px;
+              padding-right: 2px;
+              padding-bottom: 2px;
+          }
+
+          .CurColumnData {
+              width: 32%;
+              float: left;
+              overflow: hidden;
+          }
+
+          .AmountColumnHeader {
+              width: 10%;
+              float: left;
+          }
+
+          .AmountColumnData {
+              width: 22%;
+              float: left;
+          }
+
+          .conColumnLeft {
+              width: 60%;
+              float: left;
+              padding-right: 2px;
+          }
+
+          .conColumnRight {
+              width: 35%;
+              float: right;
+              padding-left: 2px;
+          }
+
+          .bordered {
+              border: 1px solid #000000;
+          }
+
+          .separator {
+              width: 2px;
+              padding-left: 2px;
+              padding-right: 2px;
+              float: left;
+          }
+
+          .textright {
+              text-align: right;
+          }
+
+          .footorcolumn {
+              width: 50%;
+              float: left;
+          }
+
+          .signatureheight {
+              height: 25px;
+          }
+
+          font.invertedCelldata {
+              color: #FFFFFF;
+              font-weight: bold;
+              font-family: arial, "sans-serif";
+              font-size: 8pt;
+          }
+
+          font {
+              color: black;
+          }
+
+          font.newheader {
+              font-weight: bold;
+              font-family: arial, "sans-serif";
+              font-size: 7pt;
+          }
+
+          font.newdata {
+              font-family: arial, "sans-serif";
+              font-size: 7pt;
+          }
+
+          font.signature {
+              font-weight: bold;
+              font-family: arial, "sans-serif";
+              font-size: 7pt;
+              line-height: 30px;
+          }
+
+          font.carrierTerms {
+              font-family: arial, helvetica "sans-serif";
+              font-size: 4pt;
+              line-height: 80%;
+          }
+
+          font.newbarcode {
+              color: black;
+              font-weight: bold;
+              font-family: "arial";
+              font-size: 7pt;
+              letter-spacing: 0.05cm
+          }
+
+          font.newlargeheader {
+              font-weight: bold;
+              font-family: arial, "sans-serif";
+              font-size: 12pt;
+              line-height: 100%;
+          }
+
+          font.newsmalldata {
+              font-family: arial, "sans-serif";
+              font-size: 5pt;
+          }
+
+          font.UKsmallprint {
+              font-family: arial, "sans-serif";
+              font-size: 6pt;
+          }
+
+          font.UKdata {
+              font-family: arial, "sans-serif";
+              font-size: 8pt;
+          }
+
+          .UKdataBold {
+              font-weight: bold;
+          }
+
+          font.UKheader {
+              font-weight: bold;
+              font-family: arial, helvetica "sans-serif";
+              font-size: 8pt;
+          }
+
+          img.center {
+              display: block;
+              margin-bottom: 7px;
+              margin-left: auto;
+              margin-right: auto;
+              margin-top: 8px;
+          }
+				
+          .UKoutertable {
+              background-color: #FF6600;
+              border: 0px;
+              border-spacing: 1px;
+              padding: 2px;
+              width: 596px;
+              overflow: hidden;
+              min-height: 766px;
+          }
+
+          .UKleftside {
+              float: left;
+              width: 263px;
+              min-height: 740px;
+              border-color: #33FF33;
+          }
+
+          .UKrightside {
+              float: right;
+              width: 326px;
+              min-height: 740px;
+              border-color: #33FF33;
+          }
+
+          .whitebordered {
+              border: 1px solid #656566;
+              padding: 1px;
+              background-color: #FFFFFF;
+          }
+
+          .UKleftrow1height {
+              height: 84px;
+          }
+
+          .UKrightrow1height {
+              height: 142px;
+          }
+
+          .UKrightrow1column1 {
+              float: left;
+              width: 64%;
+          }
+
+          .UKrightrow1column2 {
+              float: right;
+              width: 32%;
+          }
+
+          .greenbordered {
+              border: 1px solid #656566;
+              border-collapse: collapse;
+              padding: 1px;
+              background-color: #FDBA8D;
+          }
+
+          .UKleftrow3height {
+              height: 40px;
+          }
+
+          .bottommargin {
+              margin-bottom: 2px;
+          }
+
+          .UKrightrow3height {
+              height: 18px;
+          }
+
+          .UKleftrow8height {
+              height: 42px;
+          }
+
+          .UKlogo {
+              float: left;
+              width: 61%;
+              padding-left: 1px;
+              height: 100%;
+          }
+
+          .UKcopyfor {
+              float: left;
+              width: 26%;
+              height: 100%;
+          }
+
+          .UKdiv {
+              float: left;
+              width: 10%;
+              border-left: 1px solid #656566;
+              height: 100%;
+              padding-left: 1px;
+          }
+
+          .UKimageheight {
+              height: 20px;
+          }
+
+          .UKacc1 {
+              float: left;
+              width: 65%;
+          }
+
+          .UKacc2 {
+              float: left;
+              width: 15%;
+          }
+
+          .UKacc3 {
+              float: left;
+              width: 20%;
+          }
+
+          .UKaddress {
+              height: 170px;
+          }
+
+          .UKaddressline {
+              height: 17px;
+              line-height: 16px;
+          }
+
+          .UKmultiaddressline {
+              line-height: 16px;
+          }
+
+          .UKsendersignheight {
+              height: 71px;
+          }
+
+          .UKssign1a {
+              float: left;
+              width: 66%;
+          }
+
+          .UKssign1b {
+              float: right;
+              width: 33%;
+              text-align: right;
+              padding-right: 2px;
+          }
+
+          .UKssign2height {
+              height: 30px;
+          }
+
+          .UKssign3height {
+              height: 21px;
+          }
+
+          .UKserviceheight {
+              min-height: 22px;
+          }
+
+          .UKdglineheight {
+              height: 22px;
+          }
+
+          .UKdgimg {
+              float: left;
+              width: 54%;
+              height: 100%;
+          }
+
+          .UKdgun {
+              float: right;
+              width: 44%;
+              height: 100%;
+          }
+
+          .borderedrowgrey {
+              border-top: 1px solid #CCCCCC;
+              border-bottom: 1px solid #CCCCCC;
+          }
+
+          .borderedrowgrey + .borderedrowgrey {
+              border-top: 0px solid #CCCCCC;
+          }
+
+          .borderedrowgrey:last-child {
+              border-bottom: 0px solid #CCCCCC;
+          }
+
+          .borderedcolumn {
+              border-right: 1px solid #CCCCCC;
+              height: 100%;
+          }
+
+          .borderedcolumn:last-child {
+              border-right: 0px solid #CCCCCC;
+          }
+
+          .borderedinternalrowgrey {
+              border-bottom: 1px solid #CCCCCC;
+          }
+
+          .UKgoods {
+              padding: 0px;
+              min-height: 154px;
+          }
+
+          .UKgoodstotalheight {
+              height: 61px;
+          }
+
+          .UKgoodscol1 {
+              float: left;
+              width: 38%;
+          }
+
+          .UKgoodscol2 {
+              float: left;
+              width: 12%;
+          }
+
+          .UKgoodscolr {
+              float: left;
+              width: 37%;
+              height: 100%;
+          }
+
+          .UKpdfheight {
+              height: 101px;
+              padding-bottom: 7px;
+          }
+
+          .UKtc {
+              padding: 2px;
+              width: 594px;
+              overflow: hidden;
+}                 
+        </style></head><body><script>includePageBreak();</script><div class="body"><div class="column1"><div class="row rowheight"><div class="header"><font class="invertedCelldata">1.From (Collection Address)</font></div><div class="row Line80fixed12"><div class="addressAccHeader"><font class="newheader">
+              Sender's Account No :
+            </font></div><div class="addressAccData"><font class="newdata">21697</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Name :
+        </font></div><div class="addressData"><font class="newdata">Wiwynn Corporation</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Address :
+        </font></div><div class="addressData"><font class="newdata">CT PARK BRNO TURANKA 102</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+           
+        </font></div><div class="addressData"><font class="newdata"> SLATINA
+                ,
+                BRNO 62700</font></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            City :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">BRNO</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight1"><font class="newheader">
+            Postal/Zip Code :
+          </font></div><div class="addressLMFDataRRight1"><font class="newdata">62700</font></div></div></div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            Province :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">
+                 
+              </font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Location :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">CZECH REPUBLIC</font></div></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft2"><font class="newheader">
+            Contact Name :
+          </font></div><div class="addressLMFDataLLeft2"><font class="newdata">Linda Chen</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Tel no :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">1-915-2 98-6923</font></div></div></div></div><div class="row addressheight"><div class="header"><font class="invertedCelldata">2.To (Receiver Address)</font></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Name :
+        </font></div><div class="addressData"><font class="newdata">Microsoft AMS05</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Address :
+        </font></div><div class="addressData"><font class="newdata">Agriport 570</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+           
+        </font></div><div class="addressData"><font class="newdata">
+               
+            </font></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            City :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">Middenmeer</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight1"><font class="newheader">
+            Postal/Zip Code :
+          </font></div><div class="addressLMFDataRRight1"><font class="newdata">1775TB</font></div></div></div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            Province :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">
+                 
+              </font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Location :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">NETHERLANDS</font></div></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft2"><font class="newheader">
+            Contact Name :
+          </font></div><div class="addressLMFDataLLeft2"><font class="newdata">Microsoft AMS05</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Tel no :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">31 20 6 559980</font></div></div></div></div><div class="row goodsheight"><div class="header"><font class="invertedCelldata">3.Goods</font></div><div class="row Line80fixed12"><font class="newheader">
+          General Description :
+        </font></div><div class="row Line80fixed12"><font class="newdata">paperclips</font></div><div class="row Line80fixed12"><font class="newdata" /></div><div class="row Line80fixed12"><font class="newdata" /></div><div class="row Line80fixed12"><div class="HtsColumnLeft"><font class="newheader">
+            Harmonized Tariff Code :
+          </font></div><div class="HtsColumnRight"><font class="newdata">ABC</font></div></div><div class="row separatorheight"><br /></div><div class="row Line80fixed12"><div class="PackColumn"><font class="newheader">
+            Total Packages : 
+          </font><font class="newdata">1</font></div><div class="WeightColumn"><font class="newheader">
+            Total Weight : 
+          </font><font class="newdata">0.100 kg</font></div><div class="VolumeColumn"><font class="newheader">
+            Total Volume : 
+          </font><font class="newdata">0.001 m3</font></div></div></div><div class="row serviceheight"><div class="header"><font class="invertedCelldata">4. Services</font></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+            Service :
+          </font></div><div class="ServColumnData"><font class="newdata">15N Express</font></div><div class="ServGenColumnRight centered"><font class="newheader">
+             
+          </font></div></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+            Options :
+          </font></div><div class="ServColumnData"><font class="newdata">
+                 
+              </font></div><div class="ServGenColumnRight centered"><font class="newheader">
+                NON DANGEROUS GOODS
+              </font></div></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+             
+          </font></div><div class="ServColumnData"><font class="newdata">
+                 
+              </font></div><div class="ServGenColumnRight centered"><font class="newheader">
+             
+          </font></div></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+             
+          </font></div><div class="ServColumnData"><font class="newdata">
+                 
+              </font></div><div class="ServGenColumnRight centered"><font class="newheader">
+             
+          </font></div></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+             
+          </font></div><div class="ServColumnData"><font class="newdata">
+                 
+              </font></div><div class="ServGenColumnRight centered"><font class="newheader">
+                SENDER PAYS
+              </font></div></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+             
+          </font></div><div class="ServColumnData"><font class="newdata">
+                 
+              </font></div><div class="ServGenColumnRight"><font class="newheader">
+             
+          </font></div></div><div class="row Line80fixed21"><div class="CurColumnHeader padded2"><font class="newheader">
+                Insurance Currency :
+              </font></div><div class="CurColumnData padded2"><font class="newdata">
+                     
+                  </font></div><div class="AmountColumnHeader padded2"><font class="newheader">
+                Value :
+              </font></div><div class="AmountColumnData padded2"><font class="newdata" /></div></div><div class="row Line80fixed21"><div class="CurColumnHeader"><font class="signature">
+            Sender's Signature :
+          </font></div><div class="CurColumnData"><font class="signature">
+            _____________________
+          </font></div><div class="AmountColumnHeader"><font class="signature">
+            Date :
+          </font></div><div class="AmountColumnData"><font class="signature"><u>05/07/2019</u></font></div></div><div class="row signatureheight">
+         
+      </div><div class="row signatureBox"><font class="carrierTerms">
+          OUR LIABILITY FOR LOSS, DAMAGE AND DELAY IS LIMITED BY THE CMR CONVENTION OR THE WARSAW CONVENTION WHICHEVER IS APPLICABLE. THE SENDER AGREES THAT CARRIAGE OF THIS CONSIGNMENT IS SUBJECT TO THE TERMS AND CONDITIONS WHICH CAN BE VIEWED AT WWW.TNT.COM. IF NO SERVICES OR BILLING OPTIONS ARE SELECTED THE FASTEST AVAILABLE SERVICE WILL BE CHARGED TO THE SENDER.
+        </font></div></div></div><div class="column2"><div class="row rowheight"><div class="row centered"><img class="center" src="https://express.tnt.com/expresswebservices-website/rendering/images/logo-small.gif" /></div><div class="row barcode bordered"><div class="conColumnLeft centered"><img class="center" height="55" src="https://express.tnt.com/barbecue/barcode?type=code39&amp;height=70&amp;width=1&amp;data=GE341460415CZ" /></div><div class="conColumnRight centered"><font class="newdata"><br />
+            Please quote this Number
+            <br />
+            if you have an enquiry.
+            <br /></font><font class="newbarcode">
+            *
+            GE341460415CZ
+            *
+          </font></div></div></div><div class="row addressheight"><div class="header"><font class="invertedCelldata">A. Delivery Address</font></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Name :
+        </font></div><div class="addressData"><font class="newdata">Microsoft AMS05</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Address :
+        </font></div><div class="addressData"><font class="newdata">Agriport 570</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+           
+        </font></div><div class="addressData"><font class="newdata">
+               
+            </font></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            City :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">Middenmeer</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight1"><font class="newheader">
+            Postal/Zip Code :
+          </font></div><div class="addressLMFDataRRight1"><font class="newdata">1775TB</font></div></div></div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            Province :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">
+                 
+              </font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Location :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">NETHERLANDS</font></div></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft2"><font class="newheader">
+            Contact Name :
+          </font></div><div class="addressLMFDataLLeft2"><font class="newdata">Microsoft AMS05</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Tel no :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">31 20 6 559980</font></div></div></div></div><div class="row dutyheight"><div class="header"><font class="invertedCelldata">B. Dutiable Shipment Details</font></div><div class="row Line80fixed12"><font class="newheader">
+          Receivers VAT/TVA/BTW/MWST No. :
+        </font></div><div class="row Line80fixed12"><font class="newdata" /></div><div class="row Line80fixed12"><font class="newheader">
+              Invoice Value of Dutiables
+            </font></div><div class="row Line80fixed12"><div class="CurColumnHeader padded2"><font class="newheader">
+                Currency :
+              </font></div><div class="CurColumnData padded2"><font class="newdata">CZK</font></div><div class="AmountColumnHeader padded2"><font class="newheader">
+                Value :
+              </font></div><div class="AmountColumnData padded2"><font class="newdata">20.80</font></div></div></div><div class="row instructionsheight"><div class="header"><font class="invertedCelldata">C. Special Delivery Instructions</font></div><div class="row Line80fixed12"><font class="newdata">IO#</font></div><div class="row Line80fixed12"><font class="newdata">
+           
+        </font></div><div class="row Line80fixed12"><font class="newdata">
+           
+        </font></div></div><div class="row custrefheight"><div class="header"><font class="invertedCelldata">D. Customer Reference</font></div><div class="row Line80fixed17"><font class="newdata">RMA</font></div></div><div class="row custrefheight"><div class="header"><font class="invertedCelldata">E. Invoice Receiver (Receiver's Account Number)</font></div><div class="row Line80fixed17"><font class="newdata">
+               
+            </font></div></div><div class="row"><div class="conColumnLeft instructionsheight bordered"><div class="topfooterrow"><div class="row Line80fixed12"><font class="newdata">
+              Received by TNT
+            </font></div><div class="row Line80fixed12"><font class="newdata">
+              by (Name) :
+            </font></div></div><div class="footorcolumn"><div class="row Line80fixed21 centered"><font class="signature">
+              Date : ____/____/____
+            </font></div></div><div class="footorcolumn"><div class="row Line80fixed21 centered"><font class="signature">
+              Time : ____:____
+            </font></div></div></div><div class="separator instructionsheight">
+         
+      </div><div class="conColumnRight instructionsheight bordered"><div class="row Line21fixed centered"><font class="newlargeheader">
+                CUSTOM'S
+              </font></div><div class="row Line21fixed centered"><font class="newlargeheader">
+            COPY
+          </font></div><div class="row Line30fixed centered"><font class="newsmalldata">
+            Please Keep For Reference
+          </font></div></div></div><div class="Line30fixed textright"><font class="carrierTerms">
+            ExpressConnect 3
+          </font></div></div></div><script>includePageBreak();</script><div class="body"><div class="column1"><div class="row rowheight"><div class="header"><font class="invertedCelldata">1.From (Collection Address)</font></div><div class="row Line80fixed12"><div class="addressAccHeader"><font class="newheader">
+              Sender's Account No :
+            </font></div><div class="addressAccData"><font class="newdata">21697</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Name :
+        </font></div><div class="addressData"><font class="newdata">Wiwynn Corporation</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Address :
+        </font></div><div class="addressData"><font class="newdata">CT PARK BRNO TURANKA 102</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+           
+        </font></div><div class="addressData"><font class="newdata"> SLATINA
+                ,
+                BRNO 62700</font></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            City :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">BRNO</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight1"><font class="newheader">
+            Postal/Zip Code :
+          </font></div><div class="addressLMFDataRRight1"><font class="newdata">62700</font></div></div></div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            Province :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">
+                 
+              </font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Location :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">CZECH REPUBLIC</font></div></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft2"><font class="newheader">
+            Contact Name :
+          </font></div><div class="addressLMFDataLLeft2"><font class="newdata">Linda Chen</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Tel no :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">1-915-2 98-6923</font></div></div></div></div><div class="row addressheight"><div class="header"><font class="invertedCelldata">2.To (Receiver Address)</font></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Name :
+        </font></div><div class="addressData"><font class="newdata">Microsoft AMS05</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Address :
+        </font></div><div class="addressData"><font class="newdata">Agriport 570</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+           
+        </font></div><div class="addressData"><font class="newdata">
+               
+            </font></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            City :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">Middenmeer</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight1"><font class="newheader">
+            Postal/Zip Code :
+          </font></div><div class="addressLMFDataRRight1"><font class="newdata">1775TB</font></div></div></div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            Province :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">
+                 
+              </font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Location :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">NETHERLANDS</font></div></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft2"><font class="newheader">
+            Contact Name :
+          </font></div><div class="addressLMFDataLLeft2"><font class="newdata">Microsoft AMS05</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Tel no :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">31 20 6 559980</font></div></div></div></div><div class="row goodsheight"><div class="header"><font class="invertedCelldata">3.Goods</font></div><div class="row Line80fixed12"><font class="newheader">
+          General Description :
+        </font></div><div class="row Line80fixed12"><font class="newdata">paperclips</font></div><div class="row Line80fixed12"><font class="newdata" /></div><div class="row Line80fixed12"><font class="newdata" /></div><div class="row Line80fixed12"><div class="HtsColumnLeft"><font class="newheader">
+            Harmonized Tariff Code :
+          </font></div><div class="HtsColumnRight"><font class="newdata">ABC</font></div></div><div class="row separatorheight"><br /></div><div class="row Line80fixed12"><div class="PackColumn"><font class="newheader">
+            Total Packages : 
+          </font><font class="newdata">1</font></div><div class="WeightColumn"><font class="newheader">
+            Total Weight : 
+          </font><font class="newdata">0.100 kg</font></div><div class="VolumeColumn"><font class="newheader">
+            Total Volume : 
+          </font><font class="newdata">0.001 m3</font></div></div></div><div class="row serviceheight"><div class="header"><font class="invertedCelldata">4. Services</font></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+            Service :
+          </font></div><div class="ServColumnData"><font class="newdata">15N Express</font></div><div class="ServGenColumnRight centered"><font class="newheader">
+             
+          </font></div></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+            Options :
+          </font></div><div class="ServColumnData"><font class="newdata">
+                 
+              </font></div><div class="ServGenColumnRight centered"><font class="newheader">
+                NON DANGEROUS GOODS
+              </font></div></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+             
+          </font></div><div class="ServColumnData"><font class="newdata">
+                 
+              </font></div><div class="ServGenColumnRight centered"><font class="newheader">
+             
+          </font></div></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+             
+          </font></div><div class="ServColumnData"><font class="newdata">
+                 
+              </font></div><div class="ServGenColumnRight centered"><font class="newheader">
+             
+          </font></div></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+             
+          </font></div><div class="ServColumnData"><font class="newdata">
+                 
+              </font></div><div class="ServGenColumnRight centered"><font class="newheader">
+                SENDER PAYS
+              </font></div></div><div class="row Line80fixed12"><div class="ServColumnHeader"><font class="newheader">
+             
+          </font></div><div class="ServColumnData"><font class="newdata">
+                 
+              </font></div><div class="ServGenColumnRight"><font class="newheader">
+             
+          </font></div></div><div class="row Line80fixed21">
+             
+          </div><div class="row Line80fixed21"><div class="CurColumnHeader"><font class="signature">
+            Sender's Signature :
+          </font></div><div class="CurColumnData"><font class="signature">
+            _____________________
+          </font></div><div class="AmountColumnHeader"><font class="signature">
+            Date :
+          </font></div><div class="AmountColumnData"><font class="signature"><u>05/07/2019</u></font></div></div><div class="row signatureheight">
+         
+      </div><div class="row signatureBox"><font class="carrierTerms">
+          OUR LIABILITY FOR LOSS, DAMAGE AND DELAY IS LIMITED BY THE CMR CONVENTION OR THE WARSAW CONVENTION WHICHEVER IS APPLICABLE. THE SENDER AGREES THAT CARRIAGE OF THIS CONSIGNMENT IS SUBJECT TO THE TERMS AND CONDITIONS WHICH CAN BE VIEWED AT WWW.TNT.COM. IF NO SERVICES OR BILLING OPTIONS ARE SELECTED THE FASTEST AVAILABLE SERVICE WILL BE CHARGED TO THE SENDER.
+        </font></div></div></div><div class="column2"><div class="row rowheight"><div class="row centered"><img class="center" src="https://express.tnt.com/expresswebservices-website/rendering/images/logo-small.gif" /></div><div class="row barcode bordered"><div class="conColumnLeft centered"><img class="center" height="55" src="https://express.tnt.com/barbecue/barcode?type=code39&amp;height=70&amp;width=1&amp;data=GE341460415CZ" /></div><div class="conColumnRight centered"><font class="newdata"><br />
+            Please quote this Number
+            <br />
+            if you have an enquiry.
+            <br /></font><font class="newbarcode">
+            *
+            GE341460415CZ
+            *
+          </font></div></div></div><div class="row addressheight"><div class="header"><font class="invertedCelldata">A. Delivery Address</font></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Name :
+        </font></div><div class="addressData"><font class="newdata">Microsoft AMS05</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+          Address :
+        </font></div><div class="addressData"><font class="newdata">Agriport 570</font></div></div><div class="row Line80fixed12"><div class="addressHeader"><font class="newheader">
+           
+        </font></div><div class="addressData"><font class="newdata">
+               
+            </font></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            City :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">Middenmeer</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight1"><font class="newheader">
+            Postal/Zip Code :
+          </font></div><div class="addressLMFDataRRight1"><font class="newdata">1775TB</font></div></div></div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft1"><font class="newheader">
+            Province :
+          </font></div><div class="addressLMFDataLLeft1"><font class="newdata">
+                 
+              </font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Location :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">NETHERLANDS</font></div></div></div><div class="row separatorheight">
+       
+    </div><div class="row Line80fixed12"><div class="addressLMFColumnLeft"><div class="addressLMFHeaderLLeft2"><font class="newheader">
+            Contact Name :
+          </font></div><div class="addressLMFDataLLeft2"><font class="newdata">Microsoft AMS05</font></div></div><div class="addressLMFColumnRight"><div class="addressLMFHeaderRRight2"><font class="newheader">
+            Tel no :
+          </font></div><div class="addressLMFDataRRight2"><font class="newdata">31 20 6 559980</font></div></div></div></div><div class="row dutyheight"><div class="header"><font class="invertedCelldata">B. Dutiable Shipment Details</font></div><div class="row Line80fixed12"><font class="newheader">
+          Receivers VAT/TVA/BTW/MWST No. :
+        </font></div><div class="row Line80fixed12"><font class="newdata" /></div><div class="row Line80fixed12"><font class="newheader">
+               
+            </font></div><div class="row Line80fixed12">
+             
+          </div></div><div class="row instructionsheight"><div class="header"><font class="invertedCelldata">C. Special Delivery Instructions</font></div><div class="row Line80fixed12"><font class="newdata">IO#</font></div><div class="row Line80fixed12"><font class="newdata">
+           
+        </font></div><div class="row Line80fixed12"><font class="newdata">
+           
+        </font></div></div><div class="row custrefheight"><div class="header"><font class="invertedCelldata">D. Customer Reference</font></div><div class="row Line80fixed17"><font class="newdata">RMA</font></div></div><div class="row custrefheight"><div class="header"><font class="invertedCelldata">E. Invoice Receiver (Receiver's Account Number)</font></div><div class="row Line80fixed17"><font class="newdata">
+               
+            </font></div></div><div class="row"><div class="conColumnLeft instructionsheight bordered"><div class="topfooterrow"><div class="row Line80fixed12"><font class="newdata">
+              Received by TNT
+            </font></div><div class="row Line80fixed12"><font class="newdata">
+              by (Name) :
+            </font></div></div><div class="footorcolumn"><div class="row Line80fixed21 centered"><font class="signature">
+              Date : ____/____/____
+            </font></div></div><div class="footorcolumn"><div class="row Line80fixed21 centered"><font class="signature">
+              Time : ____:____
+            </font></div></div></div><div class="separator instructionsheight">
+         
+      </div><div class="conColumnRight instructionsheight bordered"><div class="row Line21fixed centered"><font class="newlargeheader">
+                RECEIVER'S
+              </font></div><div class="row Line21fixed centered"><font class="newlargeheader">
+            COPY
+          </font></div><div class="row Line30fixed centered"><font class="newsmalldata">
+            Please Keep For Reference
+          </font></div></div></div><div class="Line30fixed textright"><font class="carrierTerms">
+            ExpressConnect 3
+          </font></div></div></div></body></html>
